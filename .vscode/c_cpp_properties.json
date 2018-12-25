@@ -1,11 +1,11 @@
-
 {
     "configurations": [
         {
             "name": "Win32",
             "intelliSenseMode": "clang-x64",
             "includePath": [
-                "${workspaceFolder}"
+                "${workspaceFolder}",
+                "Z:/c++/ming/lib/gcc/mingw32/6.3.0/include/c++"
             ],
             "defines": [
                 "_DEBUG",

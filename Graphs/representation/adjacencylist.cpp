@@ -1,6 +1,6 @@
 /***********************************************************************************************
  * 
- * Undirected GRAPH 
+ * Unweighted Undirected GRAPH 
  * REPRESENTATION USING VECTOR ARRAY
  * 
  * *******************************************************************************************/
@@ -11,8 +11,8 @@
 using namespace std;
 
 void addEdge(vector<int> graph[],int src ,int dest){
-           graph[src].push_back(dest);
-           graph[dest].push_back(src);
+           graph[src].emplace_back(dest);
+           graph[dest].emplace_back(src);
 }
 
 int main(){
