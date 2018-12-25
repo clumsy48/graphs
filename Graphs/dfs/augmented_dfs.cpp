@@ -1,5 +1,4 @@
 /********************************
- * TOPOLOGICAL SORT
  * DIRECTED GRAPH
  *  (0, 1); 
     (0, 2); 
