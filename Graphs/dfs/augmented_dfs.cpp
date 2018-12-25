@@ -2,9 +2,12 @@
 #include <vector>
 
 using namespace std;
+
 static int counter = 0;
 vector<int> pre_order;
 vector<int> post_order;
+
+
 struct Node
 {
     int vertex;
@@ -68,5 +71,5 @@ int main()
     addEdge(graph, 3, 3);
 
     dfs(graph, 2, verticesCount);
-    //   cin >> verticesCount;
+       
 }
