@@ -19,9 +19,16 @@ static int counter = 0;
 vector<int> pre_order;
 vector<int> post_order;
 
+
+struct Node
+{
+    int vertex;
+    int pre_order;
+    int postorder;
+};
 void addEdge(vector<int> graph[], int src, int dest)
 {
-    graph[src].emplace_back(dest);
+    graph[src].emplace_back(src);
 }
 void dfsUtil(vector<int> graph[], int src, vector<bool> &visited)
 {
@@ -29,8 +36,8 @@ void dfsUtil(vector<int> graph[], int src, vector<bool> &visited)
     pre_order[src] = ++counter;
     cout << src << " " << counter << "\n";
     for (vector<int>::iterator i = graph[src].begin(); i != graph[src].end(); i++)
-    {   
-        if (visited[*i] == false)
+    {
+        if (visited[(*i).vertex] == false)
             dfsUtil(graph, *i, visited);
     }
     post_order[src] = ++counter;
@@ -45,7 +52,7 @@ void dfs(vector<int> graph[], int src, int verticesCount)
     for (int i = 0; i < verticesCount; i++)
     {
         cout << i << " " << pre_order[i] << " " << post_order[i] << endl;
-        
+        ;
     }
 }
 
@@ -65,5 +72,5 @@ int main()
     addEdge(graph, 3, 3);
 
     dfs(graph, 2, verticesCount);
-    
+       
 }
