@@ -64,7 +64,7 @@ void findshortestPath(vertexPair graph[], int noOfVectices, int src)
     {
         cout << dist[i] << " ";
     }
-    cin >> noOfVectices;
+    
 }
 int main(void)
 {
