@@ -38,8 +38,8 @@ void findshortestPath(vertexPair graph[], int noOfVectices, int src)
 
     set<dpair, customCmp> edgeRelaxser;
     vector<int> dist(noOfVectices, __INT_MAX__);
+    vector<int> parent(noOfVectices, __INT_MAX__);
     dist[src] = 0;
-    vector<int> parent(noOfVectices,-1);
     parent[src] = -1;
     edgeRelaxser.insert(mp(src, 0));
     while (!edgeRelaxser.empty())
@@ -51,16 +51,15 @@ void findshortestPath(vertexPair graph[], int noOfVectices, int src)
         for (vertexPairItr i = graph[curVertex].begin(); i != graph[curVertex].end(); i++)
         {
             dpair adjvertexPair = *i;
-            if (dist[adjvertexPair.first] > dist[curVertex] + adjvertexPair.second)
+            parent[(*i).first] = src;
+            if (edgeRelaxser.find(*i)!=edgeRelaxser.end() && dist[adjvertexPair.first] > dist[curVertex] + adjvertexPair.second)
             {
-                if (dist[adjvertexPair.first] != __INT_MAX__)
-                {
-                    edgeRelaxser.erase(adjvertexPair);
-                }
-                parent[adjvertexPair.first] = curVertex;
                 dist[adjvertexPair.first] = dist[curVertex] + adjvertexPair.second;
                 edgeRelaxser.insert(mp(adjvertexPair.first, dist[adjvertexPair.first]));
             }
+        }
+        for(int i=0;i<noOfVectices;i++){
+            cout << parent[i] << " " << dist[i] << endl;
         }
     }
     for (int i = 0; i < noOfVectices; i++)
