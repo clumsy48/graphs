@@ -5,13 +5,13 @@
             "intelliSenseMode": "clang-x64",
             "includePath": [
                 "${workspaceFolder}",
-                "Z:/c++/ming/lib/gcc/mingw32/6.3.0/include/c++"
+                "C:\\MinGW\\lib\\gcc\\mingw32\\8.2.0\\include\\c++"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE"
             ],
-            "compilerPath": "Z:\\c++\\ming\\bin\\g++.exe",
+            "compilerPath": "C:\\MinGW\\bin\\g++.exe",
             "browse": {
                 "path": [
                     "${workspaceFolder}"

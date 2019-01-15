@@ -35,7 +35,7 @@ void dfs(vector<int> graph[], int src, int vecticesCount)
     (2, 0); 
     (2, 3); 
     (3, 3);
- * 
+ * Complexity O(V+E)
  * ***********************************/
 
 int main()

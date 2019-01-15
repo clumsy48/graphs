@@ -33,6 +33,7 @@
         "cmath": "cpp",
         "deque": "cpp",
         "set": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "queue": "cpp"
     }
 }
