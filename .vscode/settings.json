@@ -34,6 +34,10 @@
         "deque": "cpp",
         "set": "cpp",
         "algorithm": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "cstddef": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "memory": "cpp"
     }
 }
