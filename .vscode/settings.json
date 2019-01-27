@@ -38,6 +38,8 @@
         "cstddef": "cpp",
         "cstring": "cpp",
         "ctime": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "string": "cpp",
+        "map": "cpp"
     }
 }
